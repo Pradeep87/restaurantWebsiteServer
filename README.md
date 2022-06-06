@@ -1,9 +1,9 @@
 this is a Restaurant Webapp build using React,
 Node Backend and Expressjs based code setup to be integrated with MongoDB, which has
-
-Seprated Routes
-Multi Middlewares
+Seprated Routes,
+Multi Middlewares,
 Clean and Manageable code
+
 Getting Started
 
 //
@@ -11,7 +11,9 @@ Getting Started
 Running project(all commands from root of project directory)
 
 npm install : to install bacend dependencies
+
 npm run client-deps : to install frontend dependencies
+
 npm run dev : to run the server 
 
 //
