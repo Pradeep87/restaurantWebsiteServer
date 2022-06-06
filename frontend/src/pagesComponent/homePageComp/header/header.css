@@ -1,0 +1,63 @@
+.headerContainer {
+  background-color:rgba(239,79,95, 0.5);
+  color: white;
+  margin-top: 75px;
+}
+.ratings {
+  display: flex;
+}
+.ratings div {
+  border-right: 1px solid grey;
+  padding: 0px 30px 0px 0px;
+  margin: 30px 30px 0px 0px;
+}
+.ratings div p {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+}
+.ratings div:last-child {
+  border: none;
+}
+.offers {
+  width: 400px;
+  border: 1px solid white;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: Roboto;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+.OfferTag {
+  width: 100px;
+  position: absolute;
+  top: -27px;
+  left: -1px;
+  background-color: white;
+  color:rgba(239,79,95,0.5) ;
+  border: 5px solid rgba(239,79,95,0.5) ;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.offers div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.offers div .fa-solid {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.qrCode {
+  width: 150px;
+  height: 150px;
+}
+.qrCode img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,63 @@
+.informationTabs {
+  width: 100%;
+  height: 81vh;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 3px;
+  padding:  20px 0px 20px 20px; 
+}
+.informationTabs > ul  {
+  width: 15%;
+  list-style-type: none;
+  border-right: 1px solid #ef4f5f;
+}
+.informationTabs ul li {
+  list-style-type: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  padding: 15px 5px;
+  margin: 5px 0px;
+}
+
+.informationTabs ul li:hover {
+  background-color: #ef4f5f;
+  border-radius: 5px 0px 0px 5px;
+  color: white;
+transition: all 0.3s;
+
+}
+.activeInfoTab{
+  background-color: #ef4f5f;
+  border-radius: 5px 0px 0px 5px;
+  color: white;
+transition: all 0.3s;
+}
+
+.aboutInformation {
+  height: 81vh;
+}
+.informationTabsContent {
+  width: 70%;
+  height: 100%;
+  overflow: auto;
+  padding: 0px 20px 0px 0px;
+}
+.informationTabsContent::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+.informationTabsContent::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+.informationTabsContent::-webkit-scrollbar-thumb {
+  background: #ef4f5f;
+  border-radius: 10px;
+}
+/* Handle on hover */
+.informationTabsContent::-webkit-scrollbar-thumb:hover {
+  background: #ef4f5f;
+}

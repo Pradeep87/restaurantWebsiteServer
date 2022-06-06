@@ -1,0 +1,140 @@
+.orderPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: white;
+}
+.ordersTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ordersTop > div {
+  display: flex;
+  align-items: center;
+}
+.bellIcon {
+  font-size: 20px;
+  margin-right: 20px;
+}
+.orderSection {
+  width: 30%;
+  height: 100%;
+}
+.orderDetailSection {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.orderCard {
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 3px;
+}
+.orderCardCutomer span {
+  font-size: 12px;
+}
+.orderCardCutomer span span {
+  background-color: purple;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+.orderNumber {
+  font-size: 12px;
+  margin: 5px 0px;
+}
+.orderStatus {
+  font-size: 12px;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: green;
+}
+
+
+
+.aboutOrder > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.aboutCustomer {
+  display: flex;
+  flex-direction: column;
+}
+.cutomerImage{
+  display: flex;
+  align-items: center;
+}
+.cutomerImage img{
+width: 50px;
+height: 50px;
+margin-right: 20px;
+border-radius: 50%;
+}
+.cutomerImage .fa-location-dot{
+font-size: 30px;
+margin-right: 40px;
+margin-left: 10px;
+}
+
+
+.cutomerImage p{
+  font-weight: bold;
+
+}
+.aboutDelivery {
+  display: flex;
+  flex-direction: column;
+}
+.aboutDelivery a {
+  font-size: 12px;
+}
+.orderTypeTable {
+  border: 1px solid lightGray;
+  padding: 10px;
+}
+.orderTypeTable tr td {
+  border: 1px solid lightGray;
+  padding: 10px;
+}
+.orderSummry {
+  width: 40%;
+  border: 1px solid lightgray;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.foodSumry{
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+
+}
+.foodSumry img{
+width: 30px;
+height: 30px;
+}
+
+
+.foodSumry p{
+  font-size: 13px;
+}
+
+.summeryTable{
+  width: 100%;
+  padding: 10px;
+  border-top:1px solid lightgray ;
+}
+
+.summeryTable tr td{
+  padding: 10px;
+
+}

@@ -1,0 +1,42 @@
+.updateInformation {
+  width: 100%;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 3px;
+}
+.updateInformation .flexCenter {
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+.shortAbout p {
+  font-weight: bold;
+}
+.shortAbout textarea {
+  width: 100%;
+  border: 1px solid #ef4f5f;
+  outline: none;
+  border-radius: 3px;
+}
+.cuisineBox {
+  min-width: 150px;
+  border: 1px solid #ef4f5f;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 3px;
+  background-color: var(--gardientBg);
+  color: white;
+  position: relative;
+}
+.cuisineBox .fa-xmark {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+.cuisinContainer {
+  display: flex;
+  flex-wrap: wrap;
+}

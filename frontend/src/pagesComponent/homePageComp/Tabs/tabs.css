@@ -1,0 +1,84 @@
+.tabs{
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.tabs ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style-type: none;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 20px;
+}
+.tabs ul li {
+  margin: 10px;
+  padding: 0px 10px;
+  font-weight: bold;
+}
+.tabs ul li:hover {
+  border-bottom: 1px solid #ef4f5f;
+  color: #ef4f5f;
+  cursor: pointer;
+}
+.shareListing{
+margin-left: 215px; 
+margin-top: -30px 
+}
+.activeTab {
+  border-bottom: 1px solid #ef4f5f;
+  color: #ef4f5f;
+}
+.tabsContent {
+  display: none;
+}
+.activeTabContent {
+  display: block;
+  padding-left: 10px;
+  height: 500px;
+}
+
+
+.addReviewBtn {
+  width: 70%;
+  margin: auto;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.addReviewBtn > div:first-child {
+  display: flex;
+}
+.shareIcon {
+  font-size: 16px;
+  color: #ef4f5f;
+  font-weight: 600;
+}
+.shareListing {
+  border-radius: 3px;
+}
+.shareIcon .fa-share {
+  margin-right: 10px;
+}
+.socialIcons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.socialIcons div {
+  width: 150px;
+  border: 1px solid #ef4f5f;
+}
+.socialIcons div {
+  width: 89px;
+  font-size: 13px;
+  border-radius: 5px;
+  margin: 5px;
+  color: #ef4f5f;
+  cursor: pointer;
+  padding: 5px;
+}
+.socialIcons div span {
+  margin-left: 10px;
+}

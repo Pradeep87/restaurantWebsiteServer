@@ -1,0 +1,6 @@
+export {default as CartPage } from './cartPage/CartPage'
+export {default as  Dashboard} from './dashboard/Dashboard'
+export {default as HomePage } from './homePage/HomePage'
+export {default as OffersPage } from './offers/OffersPage'
+export {default as  SearchPage } from './searchPage/SearchPage'
+export {default as SignInPage } from './signInPage/SignInPage'

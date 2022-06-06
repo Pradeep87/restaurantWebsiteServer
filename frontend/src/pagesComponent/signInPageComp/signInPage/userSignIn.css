@@ -1,0 +1,21 @@
+.userIcon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.userIcon .fa-user {
+  font-size: 50px;
+  color: rgba(239, 79, 95, 0.7);
+  margin-right: 15px;
+}
+.createNewAccount {
+  display: flex;
+}
+.createNewAccount span {
+  margin-left: 20px;
+  color: #ef4f5f;
+}
+.createNewAccount span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

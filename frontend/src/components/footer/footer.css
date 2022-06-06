@@ -1,0 +1,15 @@
+.footer {
+  background-color: #e9e9eb;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 0px;
+}
+.address {
+  width: 15%;
+}
+h3 {
+  background-color: #e9e9eb;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+}

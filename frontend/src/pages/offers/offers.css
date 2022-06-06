@@ -1,0 +1,59 @@
+.offersPage {
+  margin-top: 75px;
+  background-color: rgba(23, 26, 41, 255);
+  width: 100%;
+}
+.allOffers {
+  color: white;
+  margin-right: 150px;
+}
+.offerContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.offerCard {
+  max-width: 250px;
+  height: 400px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  margin: 20px;
+}
+.offerCardImg {
+  width: 100%;
+  height: 60%;
+  border-radius: 5px;
+}
+.offerCardImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0px 0px;
+  object-fit: contain;
+}
+.offerCardBody {
+  height: 40%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-between;
+  color: gray;
+}
+.offerCardBody p:first-child {
+  font-size: 16px;
+  font-weight: 600;
+}
+.offerCardBody p:last-child {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.ratting {
+  display: flex;
+  justify-content: space-between;
+}
+.ratting p {
+  font-weight: 600;
+}
+.dishName {
+  font-size: 12px;
+}

@@ -1,0 +1,37 @@
+.button {
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button .fa-regular {
+  color: white;
+  margin-right: 10px;
+}
+.button:hover {
+  color: white;
+  opacity: 0.7;
+}
+.button:hover .fa-regular {
+  color: white;
+}
+.activeBtn {
+  background-color: #ef4f5f;
+  color: white;
+  border: 1px solid #ef4f5f;
+}
+.activeBtn .fa-regular {
+  color: white;
+}
+.btnImg {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}

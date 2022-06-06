@@ -1,0 +1,64 @@
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid lightgray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: white;
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav div img {
+  margin-right: 20px;
+}
+nav div span {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-right: 10px;
+  font-size: 18px;
+}
+nav div p {
+  margin-right: 10px;
+  font-size: 16px;
+}
+nav > ul {
+  list-style-type: none;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  font-size: 16px;
+  padding: 5px;
+}
+.activeLink {
+  border-bottom: 2px solid #ef4f5f;
+  color: #ef4f5f;
+}
+.cartNotify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notifyIcon {
+  width: 30px;
+  height: 25px;
+  background-color: #ef4f5f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-right: 5px;
+}

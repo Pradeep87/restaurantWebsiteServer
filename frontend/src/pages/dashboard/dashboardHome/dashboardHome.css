@@ -1,0 +1,134 @@
+
+.totalCardItemsContainer {
+  display: flex;
+}
+.totalItemsCard {
+  width: 20%;
+  height: 150px;
+  margin: 20px 30px 20px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  /* background-color:#ef4f5f; */
+  border-radius: 3px;
+  box-shadow: 10px 10px 5px -11px rgba(0,0,0,0.4);
+}
+.totalItemsCard div:first-child {
+}
+.TotalChart {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+}
+.TotalChart div {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  background-color: white;
+}
+.dataStatitics {
+  width: 60%;
+  background-color: white;
+  border-radius: 3px;
+  padding: 20px 0px 0px 0px;
+  box-shadow: 10px 10px 5px -11px rgba(0,0,0,0.4);
+}
+.saleIcon {
+  width: 35px;
+  height: 35px;
+  background-color: lightgray;
+  margin-right: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.thisWeek {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.thisWeekCard {
+  width: 200px;
+  margin: 0px 30px;
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  background-color: white;
+
+}
+.thisWeekCard p {
+  font-weight: bold;
+}
+.today {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.todayInformationCard {
+  min-width: 400px;
+  margin: 20px 30px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: white;
+}
+.allStatitics {
+  display: flex;
+}
+
+/* .. pichart  */
+.frist {
+  margin-left: 20px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+}
+
+.second {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 22%;
+  left: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.second span {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: capitalize;
+  color: #121417;
+}
+
+.second p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: #00c49a;
+}
+.pychart {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  transition: all 2ms;
+}

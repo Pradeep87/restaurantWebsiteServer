@@ -1,0 +1,15 @@
+.SocialSharing{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plateform{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  border-radius: 58% 42% 44% 56% / 50% 63% 37% 50% ;
+  background-color: rgba(239,79,95,0.2);
+}

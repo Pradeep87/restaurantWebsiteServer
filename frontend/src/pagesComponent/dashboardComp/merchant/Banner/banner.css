@@ -1,0 +1,9 @@
+.banner .ordersLimitList{
+align-items: center;
+}
+.banner li {
+    width: 20%;
+}
+.bannerHeader li{
+    width: 20%;
+}

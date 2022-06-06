@@ -1,0 +1,71 @@
+.orderLimitHeader {
+  display: flex;
+}
+.addNewIcon {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ef3f5f;
+  padding:7px 15px;
+  border-radius: 25px;
+  background-color: #ef3f5f;
+  color: white;
+  transition: all 0.2s;
+
+}
+.addNewIcon .fa-circle-plus {
+  transition: all 0.2s;
+  cursor: pointer;
+  color:white;
+  font-size: 25px;
+  margin-right: 10px;
+}
+.addNewIcon:hover {
+  transform: scale(1.02);
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+.ordersLimitList {
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  padding: 5px;
+}
+.ordersLimitList ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.ordersLimitList ul li{
+width: 33%;
+}
+
+.ordersLimitList ul li:last-child{
+text-align: right;
+}
+
+.ListHeader {
+  font-weight: bold;
+  padding:5px 20px;
+border-bottom: 1px solid lightGray;
+}
+.deleteIcon {
+  font-size: 20px;
+  color: #ef3f5f;
+  cursor: pointer;
+
+}
+.editIcon {
+  font-size: 20px;
+  margin-right: 20px;
+  color: #ef3f5f;
+  cursor: pointer;
+}
+.listContent{
+    padding: 5px 20px;
+    border-radius: 3px;
+    border-bottom: 1px solid lightgray;
+
+}

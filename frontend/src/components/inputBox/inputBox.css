@@ -1,0 +1,19 @@
+.userSignInInput {
+  position: relative;
+}
+.userSignInInput input {
+  outline: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #ef4f5f;
+  padding-left: 50px;
+}
+.userSignInInput .icon {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  font-size: 25px;
+  color: gray;
+  opacity: 0.5;
+}

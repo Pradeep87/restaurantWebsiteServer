@@ -1,0 +1,25 @@
+.selectBox span {
+    cursor: pointer;
+    color: gray;
+}
+.selectBox{
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 3px;
+}
+.hideList{
+height: 0px;
+overflow: hidden;
+transition: all 0.2s;
+}
+.showList{
+    height: 200px;
+overflow: hidden;
+transition: all 0.2s;
+overflow: auto;
+}
+.showList li:hover {
+    background-color: whitesmoke;
+
+}
+
