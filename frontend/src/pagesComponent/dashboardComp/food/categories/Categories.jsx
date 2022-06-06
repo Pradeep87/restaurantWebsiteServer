@@ -12,6 +12,7 @@ const Categories = () => {
     (state) => state.categoryReducer
   );
 
+  console.log(categoryData);
   const openCategoryModal = () => {
     dispatch({ type: ADD_CATEGORY_MODAL });
   };
@@ -58,11 +59,11 @@ const Categories = () => {
                       {data.categoryName} <span>Publish</span>{" "}
                     </p>
                     <Spacer height={5} />
-                    <MutedText text="0 Items" />
+                    <MutedText text={data.productCount} />
                     <Spacer height={5} />
-                    <MutedText text="date. wed, june 1, 2022 9:26" />
+                    <MutedText text={`Updated At ${data.updatetedAt} `} />
                     <Spacer height={5} />
-                    <MutedText text="Our delicious breakfast" />
+                    <MutedText text={data.meta.description} />
                   </div>
                 </li>
                 <li>
