@@ -3,12 +3,15 @@ const app = express();
 
 // imports routes
 
-const categoryRoutes = require("./routes/productRoutes/ctegoryRoutes");
-const foodRoutes = require("./routes/productRoutes/foodRoute");
+const categoryRoutes = require("./routes/categoryRoutes/ctegoryRoutes");
+const foodRoutes = require("./routes/foodItem/foodRoute");
+const subCategories = require("./routes/categoryRoutes/subCategoryRoutes");
+
 
 app.use(express.json());
 
-app.use("/api/admin", categoryRoutes);
+app.use("/api/admin/category", categoryRoutes);
+app.use("/api/admin/subcategory", subCategories);
 app.use("/api/admin", foodRoutes);
 
 app.get("/", (req, res) => {

@@ -1,24 +1,30 @@
-import React from "react";
-import {
-  ContentWrapper,
-  Spacer,
-  MutedText,
-} from ".././../../../components";
+import React, { useEffect } from "react";
+import { ContentWrapper, Spacer, MutedText } from ".././../../../components";
 import cooking from "../../../../images/cooking.png";
-import {ADD_CATEGORY_MODAL} from '../../../../redux/constants/Constants'
-import { useDispatch } from "react-redux";
+import { ADD_CATEGORY_MODAL } from "../../../../redux/constants/Constants";
+import { useDispatch, useSelector } from "react-redux";
+import { getCategory } from "../../../../redux/actions/categoryActions";
 
 const Categories = () => {
-  const dispatch=useDispatch()
-  const openCategoryModal=()=>{
-    dispatch({type:ADD_CATEGORY_MODAL})
-  }
+  const dispatch = useDispatch();
+
+  const { categoryData, loading } = useSelector(
+    (state) => state.categoryReducer
+  );
+
+  const openCategoryModal = () => {
+    dispatch({ type: ADD_CATEGORY_MODAL });
+  };
+  useEffect(() => {
+    dispatch(getCategory());
+  }, [dispatch]);
+
   return (
     <div>
       <Spacer height={50} />
       <ContentWrapper dashboard={true}>
         <h2>Category</h2>
-        <div className="addNewIcon"  onClick={openCategoryModal} >
+        <div className="addNewIcon" onClick={openCategoryModal}>
           <i class="fa-solid fa-circle-plus"></i>
           <h2>Add New</h2>
         </div>
@@ -32,36 +38,43 @@ const Categories = () => {
             <li>Actions</li>
           </ul>
           <Spacer height={20} />
-          <ul className="listContent banner">
-            <li>
-              <img
-                src={cooking}
-                alt=""
-                style={{ width: "100px", height: "100px" }}
-              />
-            </li>
-
-            <li>
-              <div>
-                <p>
-                  BreakFast <span>Publish</span>{" "}
-                </p>
-                <Spacer height={5} />
-                <MutedText text="0 Items" />
-                <Spacer height={5} />
-                <MutedText text="date. wed, june 1, 2022 9:26" />
-                <Spacer height={5} />
-                <MutedText text="Our delicious breakfast" />
-              </div>
-            </li>
-            <li>
-              <i
-                class="fa-solid fa-pencil editIcon "
-                onClick={openCategoryModal}
-              ></i>
-              <i class="fa-solid fa-trash deleteIcon "></i>
-            </li>
-          </ul>
+          {loading ? (
+            <>
+              <h1>loading</h1>
+            </>
+          ) : (
+            categoryData?.map((data) => (
+              <ul className="listContent banner" key={data._id}>
+                <li>
+                  <img
+                    src={cooking}
+                    alt=""
+                    style={{ width: "100px", height: "100px" }}
+                  />
+                </li>
+                <li>
+                  <div>
+                    <p>
+                      {data.categoryName} <span>Publish</span>{" "}
+                    </p>
+                    <Spacer height={5} />
+                    <MutedText text="0 Items" />
+                    <Spacer height={5} />
+                    <MutedText text="date. wed, june 1, 2022 9:26" />
+                    <Spacer height={5} />
+                    <MutedText text="Our delicious breakfast" />
+                  </div>
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-pencil editIcon "
+                    onClick={openCategoryModal}
+                  ></i>
+                  <i class="fa-solid fa-trash deleteIcon "></i>
+                </li>
+              </ul>
+            ))
+          )}
         </div>
       </ContentWrapper>
     </div>

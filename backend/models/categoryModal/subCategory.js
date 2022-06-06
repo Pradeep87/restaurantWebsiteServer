@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const subCategorySchema = new mongoose.Schema({
   subCategoryName: {
     type: String,
-    required: [true, "Please Enter Category Name"],
+    required: [true, "Please Enter SubCategory Name"],
   },
   parentCategory: {
     type: String,

@@ -43,23 +43,20 @@ const appReducerFunction = (state = appInitialState, action) => {
     case ADD_PAGE_MODAL:
       return { addPageModal: !state.addPageModal };
 
-      case ADD_ADDON_MODAL:
-        return { addonModal: !state.addonModal };
+    case ADD_ADDON_MODAL:
+      return { addonModal: !state.addonModal };
 
+    case ADD_CATEGORY_MODAL:
+      return { categoriesModal: !state.categoriesModal };
 
-        case ADD_CATEGORY_MODAL:
-          return { categoriesModal: !state.categoriesModal };
+    case ADD_SUBCATEGORY_MODAL:
+      return { subCategoriesModal: !state.subCategoriesModal };
 
-          case ADD_SUBCATEGORY_MODAL:
-            return { subCategoriesModal: !state.subCategoriesModal };
-
-            case ADD_FOOD_MODAL:
-              return { addFoodModal: !state.addFoodModal };
+    case ADD_FOOD_MODAL:
+      return { addFoodModal: !state.addFoodModal };
 
     case OPEN_DESHBOARD_PAGE:
       return { dashboardPage: action.payload };
-
-
 
     case ADD_ORDER_LIMIT_DATA:
       return {
