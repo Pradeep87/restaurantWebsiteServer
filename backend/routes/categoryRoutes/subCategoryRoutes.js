@@ -4,14 +4,15 @@ const {
   createSubCategory,
   deletSubCategory,
   updateSubCategory,
-  getAllSubCategory
+  getAllSubCategory,
+  deletAllSubCategory
 } = require("../../controllers/categoris/subCategory");
 
 
 
-router.route("/subcategory").get(getAllSubCategory);
-router.route("/subcategory").post(createSubCategory);
-router.route("/subcategory/:id").put(updateSubCategory).delete(deletSubCategory);
+router.route("/").get(getAllSubCategory).delete(deletAllSubCategory);
+router.route("/new").post(createSubCategory);
+router.route("/:id").put(updateSubCategory).delete(deletSubCategory);
 
 
 module.exports = router;
