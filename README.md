@@ -8,7 +8,7 @@ Getting Started
 
 //
 
-Running project(all commands from root of project directory)
+Running project (all commands from root of project directory)
 
 npm install : to install bacend dependencies
 
@@ -17,6 +17,10 @@ npm run client-deps : to install frontend dependencies
 npm run dev : to run the server 
 
 //
+
+
+
+
 
 Files Structure
 
@@ -34,9 +38,34 @@ app.js -- File responsible for calling routes and their corresponding handlers/c
 server.js -- main file responsible for running server 
 
 Package.json -- file containing npm dependencies and one start script
-
-
 //
+
+Routes and API's
+
+baseUrl: http://localhost:4000
+
+for category 
+
+ post/api/admin/category/new || To create new category 
+
+ get/api/admin/category  || To get all categories 
+
+ put /api/admin/category/:id || To update category 
+ delete /api/admin/category || To delete All the category
+ delete /api/admin/category/:id  || To delete a category
+
+
+ post/api/admin/subcategory/new || To create new subcategory 
+
+ get/api/admin/subcategory  || To get all subcategories 
+
+ put /api/admin/subcategory/:id || To update subcategory 
+ delete /api/admin/subcategory || To delete All the subcategory
+ delete /api/admin/subcategory/:id  || To delete a subcategory
+
+
+
+
 
 Deployment : Not yet ready
 
