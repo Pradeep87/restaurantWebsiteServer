@@ -49,4 +49,8 @@ exports.getAllSubCategory = catchAsyncErrors(async (req, res) => {
 
 exports.deletAllSubCategory = catchAsyncErrors(async (req, res) => {
   await SubCategory.deleteMany();
+  res.status(201).json({
+    success: true,
+    message: "Categoreis Deleted Successfully ",
+  });
 });
