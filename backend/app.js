@@ -20,7 +20,7 @@ app.use("/api/admin/foodItem",foodItemRoutes)
 app.use(errorMiddleware)
 //serving swagger UI link
 app.use(
-  '/api-docs',
+  '/',
   swaggerUi.serve, 
   swaggerUi.setup(swaggerDocument)
 );

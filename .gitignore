@@ -12,3 +12,6 @@ yarn-debug.log*
 yarn-error.log*
 
 
+assets/subcategories.csv
+assets/categories.csv
+restaurantWebsite.postman_collection.json
