@@ -49,7 +49,7 @@ exports.getFoodDetails = catchAsyncError(async (req, res) => {
 exports.deletFood = catchAsyncError(async (req, res) => {
   const food = await FoodItem.findById(req.params.id);
   if (food) {
-    await FoodItem.remove();
+    await food.remove();
     res.status(201).json({
       success: true,
       message: "Product Deleted Successfully ",
