@@ -17,7 +17,7 @@ app.use("/api/admin/food",foodRoutes)
 
 //serving swagger UI link
 app.use(
-  '/api-docs',
+  '/',
   swaggerUi.serve, 
   swaggerUi.setup(swaggerDocument)
 );
