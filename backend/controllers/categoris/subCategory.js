@@ -13,6 +13,7 @@ exports.createSubCategory = catchAsyncErrors(async (req, res) => {
 exports.updateSubCategory = catchAsyncErrors(async (req, res) => {
   let subcategory = await SubCategory.findById(req.params.id);
   if (subcategory) {
+    req.body.updatedAt=Date.now();
     subcategory = await SubCategory.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,

@@ -6,7 +6,8 @@ const subCategorySchema = new mongoose.Schema({
     required: [true, "Please Enter SubCategory Name"],
   },
   parentCategory: {
-    type: String,
+    type: mongoose.Schema.ObjectId ,
+    ref:"Category",
     required: [true, "Please Enter Parent Category"],
   },
   productCount: {
@@ -44,7 +45,6 @@ const subCategorySchema = new mongoose.Schema({
   },
   updatedAt: {
     type: Date,
-    default: Date.now(),
   },
 });
 

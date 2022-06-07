@@ -19,9 +19,6 @@ npm run dev : to run the server
 //
 
 
-
-
-
 Files Structure
 
 /controllers -- API handlers/exontrollers for different routes, containing CRUD operations/verbs like PUT, 
@@ -51,16 +48,21 @@ for category
  get/api/admin/category  || To get all categories 
 
  put /api/admin/category/:id || To update category 
+ 
  delete /api/admin/category || To delete All the category
+ 
  delete /api/admin/category/:id  || To delete a category
 
+for Subcategory
 
  post/api/admin/subcategory/new || To create new subcategory 
 
  get/api/admin/subcategory  || To get all subcategories 
 
  put /api/admin/subcategory/:id || To update subcategory 
+ 
  delete /api/admin/subcategory || To delete All the subcategory
+ 
  delete /api/admin/subcategory/:id  || To delete a subcategory
 
 

@@ -30,11 +30,11 @@ const FoodSchema = new mongoose.Schema({
     },
   ],
   category: {
-    type: String,
+    type: mongoose.Schema.ObjectId,
     required: true,
   },
   subCategory: {
-    type: String,
+    type: mongoose.Schema.ObjectId,
     required:true,
   },
   minOrder:{
@@ -52,11 +52,10 @@ default:0
   },
   updatedAt: {
     type: Date,
-    default: Date.now(),
   },
 });
 
-module.exports = mongoose.model("Food", FoodSchema);
+module.exports = mongoose.model("FoodItem", FoodSchema);
 
 // categoryId:
 // subCatID:

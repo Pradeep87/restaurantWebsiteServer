@@ -7,7 +7,7 @@ const categorySchema = new mongoose.Schema({
   },
   subCategories: [
     {
-      type: String,
+      type: mongoose.Schema.ObjectId,
     },
   ],
   productCount: {
@@ -28,7 +28,6 @@ const categorySchema = new mongoose.Schema({
         "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
     },
   },
-
   images: [
     {
       public_id: {
@@ -47,7 +46,6 @@ const categorySchema = new mongoose.Schema({
   },
   updatetedAt: {
     type: Date,
-    default: Date.now(),
   },
 });
 

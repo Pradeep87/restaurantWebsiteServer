@@ -20,6 +20,7 @@ exports.deleteAllCategory = catchAsyncErrors(async (req, res) => {
 exports.updateCategory = catchAsyncErrors(async (req, res) => {
   let category = await Category.findById(req.params.id);
   if (category) {
+    req.body.updatetedAt=Date.now()
     category = await Category.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
