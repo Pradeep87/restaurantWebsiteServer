@@ -3,11 +3,12 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import appReducerFunction from './reducers/appReducer'
 import { categoryReducerFunction } from './reducers/categoryReducer'
-
+import { foodItemReducerFunction } from './reducers/foodItemReducer'
 
 const reducer = combineReducers({
   appReducer: appReducerFunction,
-  categoryReducer:categoryReducerFunction
+  categoryReducer:categoryReducerFunction,
+  foodReducer:foodItemReducerFunction
 
 
 })
