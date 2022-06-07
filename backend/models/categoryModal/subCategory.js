@@ -5,6 +5,11 @@ const subCategorySchema = new mongoose.Schema({
     type: String,
     required: [true, "Please Enter SubCategory Name"],
   },
+  restaurant:{
+    type:String,
+    required:true,
+    default:"restaurent_id"
+  },
   parentCategory: {
     type: mongoose.Schema.ObjectId ,
     ref:"Category",

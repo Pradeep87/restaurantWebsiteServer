@@ -1,5 +1,7 @@
 import React from 'react'
 import './dashboardHome.css'
+import {Spacer} from '../../../components'
+
 
 
 
@@ -7,24 +9,25 @@ const TotalItemsCard = ({  total,
   inPercent, heading }) => {
     const Gain=80
   return (
-    <div className="totalItemsCard">
-      <div>
-        <h1>{total}</h1>
-        <p>{heading}</p>
+
+<div className="frist">
+        <div
+          className="pychart"
+          style={{
+            background: `radial-gradient(circle closest-side, transparent 100%, transparent 0),
+             conic-gradient( from 360deg, #00c49a 0, #00c49a ${Gain}%, #F5F5F5 0,#F5F5F5 ${
+              100 - Gain
+            }%)`,
+          }}
+        ></div>
+        <div className="second">
+          <div>
+            <span>{total}</span>
+            <p>{heading}</p>
+          </div>
+        </div>
       </div>
-      <div
-        className="TotalChart"
-        style={{
-          background: `radial-gradient(circle closest-side, transparent 100%, #ef4f5f 0),
-           conic-gradient( from 360deg,	#ef4f5f 0,	#ef4f5f ${inPercent}%, transparent 0,	#FFFFFF ${
-            100 - Gain
-          }%)`,
-        }}
-      >
-       
-        <div>   </div>
-      </div>
-    </div>
+
   )
 }
 
@@ -71,6 +74,7 @@ const DashboardHome = () => {
   const progress = 50
   return (
     <div className="dashboardHome">
+      <Spacer height={40} />
       <div className="totalCardItemsContainer">
         <TotalItemsCard
           progress={progress}
@@ -85,6 +89,7 @@ const DashboardHome = () => {
         <TotalItemsCard   total={8000}
           inPercent={80} heading="Total Sale" />
       </div>
+      <Spacer height={40} />
       <div className="allStatitics">
         <div className="dataStatitics">
           <div className="thisWeek">
