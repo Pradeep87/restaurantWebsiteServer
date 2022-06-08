@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { ContentWrapper, Spacer, MutedText } from ".././../../../components";
-import cooking from "../../../../images/cooking.png";
 import { ADD_CATEGORY_MODAL } from "../../../../redux/constants/Constants";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategory } from "../../../../redux/actions/categoryActions";
@@ -11,8 +10,6 @@ const Categories = () => {
   const { categoryData, loading } = useSelector(
     (state) => state.categoryReducer
   );
-
-  console.log(categoryData);
   const openCategoryModal = () => {
     dispatch({ type: ADD_CATEGORY_MODAL });
   };
@@ -48,15 +45,15 @@ const Categories = () => {
               <ul className="listContent banner" key={data._id}>
                 <li>
                   <img
-                    src={cooking}
-                    alt=""
+                    src={data.images}
+                    alt={data.name}
                     style={{ width: "100px", height: "100px" }}
                   />
                 </li>
                 <li>
                   <div>
                     <p>
-                      {data.categoryName} <span>Publish</span>{" "}
+                      {data.categoryName} <span style={{color:data.available?"green":"red"}} >{data.available?"Publish":"Not Published" }</span>{" "}
                     </p>
                     <Spacer height={5} />
                     <MutedText text={data.productCount} />

@@ -5,9 +5,13 @@
 /.pnp
 .pnp.js
 
+/.env
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-assets/*
-*.csv
-*.json
+
+
+assets/subcategories.csv
+assets/categories.csv
+restaurantWebsite.postman_collection.json

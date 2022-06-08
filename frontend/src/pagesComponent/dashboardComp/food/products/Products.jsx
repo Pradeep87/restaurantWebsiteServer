@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   ContentWrapper,
   Spacer,
@@ -6,21 +6,27 @@ import {
   CheckBox,
 } from ".././../../../components";
 import cooking from "../../../../images/cooking.png";
-import {ADD_FOOD_MODAL} from '../../../../redux/constants/Constants'
-import { useDispatch } from "react-redux";
+import { ADD_FOOD_MODAL } from "../../../../redux/constants/Constants";
+import { useDispatch, useSelector } from "react-redux";
+
+import { getAllFood } from "../../../../redux/actions/foodItemActions";
 
 const Products = () => {
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
+  const { foodData, loading } = useSelector((state) => state.foodReducer);
+  const openModal = () => {
+    dispatch({ type: ADD_FOOD_MODAL });
+  };
+  useEffect(() => {
+    dispatch(getAllFood());
+  }, [dispatch]);
 
-  const openModal=()=>{
-    dispatch({type:ADD_FOOD_MODAL})
-  }
   return (
     <div>
       <Spacer height={50} />
-      <ContentWrapper dashboard={true}  >
+      <ContentWrapper dashboard={true}>
         <h2>Products</h2>
-        <div className="addNewIcon" onClick={openModal} >
+        <div className="addNewIcon" onClick={openModal}>
           <i class="fa-solid fa-circle-plus"></i>
           <h2>Add New</h2>
         </div>
@@ -37,31 +43,39 @@ const Products = () => {
             <li>Actions</li>
           </ul>
           <Spacer height={20} />
-          <ul className="listContent banner">
-            <li>
-              <img
-                src={cooking}
-                alt=""
-                style={{ width: "100px", height: "100px" }}
-              />
-            </li>
-            <li>
-              <CheckBox />
-            </li>
-            <li>
-              name
-              <MutedText text="last modified mon, may 30,2022 3:30 pm" />
-            </li>
-            <li>category</li>
-            <li>price</li>
-            <li>
-              <i
-                class="fa-solid fa-pencil editIcon "
-                onClick={openModal}
-              ></i>
-              <i class="fa-solid fa-trash deleteIcon "></i>
-            </li>
-          </ul>
+          {loading ? (
+            <>
+              <h1>loading</h1>
+            </>
+          ) : (
+            foodData?.map((data) => (
+              <ul className="listContent banner">
+                <li>
+                  <img
+                    src={cooking}
+                    alt=""
+                    style={{ width: "100px", height: "100px" }}
+                  />
+                </li>
+                <li>
+                  <CheckBox />
+                </li>
+                <li>
+               {data.name}
+                  <MutedText text={data.meta.description} />
+                </li>
+                <li>{data.category}</li>
+                <li>{data.price}</li>
+                <li>
+                  <i
+                    class="fa-solid fa-pencil editIcon "
+                    onClick={openModal}
+                  ></i>
+                  <i class="fa-solid fa-trash deleteIcon "></i>
+                </li>
+              </ul>
+            ))
+          )}
         </div>
       </ContentWrapper>
     </div>

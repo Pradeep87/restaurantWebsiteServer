@@ -1,5 +1,5 @@
-const Category = require("../../models/categoryModal/categoryModal");
-const catchAsyncErrors = require("../../middelwares/catchAsyncError");
+const Category = require("../models/categoryModal");
+const catchAsyncErrors = require("../middelwares/catchAsyncError");
 
 exports.createCategory = catchAsyncErrors(async (req, res) => {
   const category = await Category.create(req.body);
@@ -20,6 +20,7 @@ exports.deleteAllCategory = catchAsyncErrors(async (req, res) => {
 exports.updateCategory = catchAsyncErrors(async (req, res) => {
   let category = await Category.findById(req.params.id);
   if (category) {
+    req.body.updatetedAt=Date.now()
     category = await Category.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
@@ -42,7 +43,10 @@ exports.deletCategory = catchAsyncErrors(async (req, res) => {
       message: "Category Deleted Successfully ",
     });
   } else {
-    return;
+    res.status(500).json({
+      success: false,
+      message: "Not Found",
+    });
   }
 });
 

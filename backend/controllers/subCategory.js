@@ -1,6 +1,6 @@
-const SubCategory = require("../../models/categoryModal/subCategory");
-const catchAsyncErrors = require("../../middelwares/catchAsyncError");
-const ErroHandler = require("../../utils/errorHandler");
+const SubCategory = require("../models/subCategory");
+const catchAsyncErrors = require("../middelwares/catchAsyncError");
+const ErroHandler = require("../utils/errorHandler");
 
 exports.createSubCategory = catchAsyncErrors(async (req, res) => {
   const subCategory = await SubCategory.create(req.body);
@@ -13,6 +13,7 @@ exports.createSubCategory = catchAsyncErrors(async (req, res) => {
 exports.updateSubCategory = catchAsyncErrors(async (req, res) => {
   let subcategory = await SubCategory.findById(req.params.id);
   if (subcategory) {
+    req.body.updatedAt=Date.now();
     subcategory = await SubCategory.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
@@ -29,7 +30,7 @@ exports.updateSubCategory = catchAsyncErrors(async (req, res) => {
 exports.deletSubCategory = catchAsyncErrors(async (req, res, next) => {
   const subcategory = await SubCategory.findById(req.params.id);
   if (subcategory) {
-    await SubCategory.remove();
+    await subcategory.remove();
     res.status(201).json({
       success: true,
       message: "Subcategory Deleted Successfully ",
