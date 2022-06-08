@@ -1,72 +1,63 @@
 const mongoose = require("mongoose");
 
 const restaurantSchema = new mongoose.Schema({
-  name: {
+  restaurantName: {
     type: String,
-    required: [true, "please enter the restaurant name"],
+    required: true,
   },
-  slug: {
-    type: String,
-    required: [true, "please enter the restaurant name"],
+  shopMeta: {
+    address: {
+      type: String,
+      required: true,
+    },
+    state: {
+      type: String,
+      required: true,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    country: {
+      type: String,
+      required: true,
+    },
+    countryCode: {
+      type: Number,
+      required: true,
+    },
   },
-  contactName: {
-    type: String,
-    required: [true, "please enter the contact name"],
+  shopContact: {
+    contactNumber: {
+      type: Number,
+      required: true,
+    },
+    emaild: {
+      type: String,
+      required: true,
+    },
+    mailingAddress: {
+      type: String,
+      required: true,
+    },
   },
-  contactPhone: {
-    type: String,
-    required: [true, "please enter the contact phone number"],
+  shopTime: {
+    timeslot: {
+      type: String,
+      required: true,
+    },
   },
-  contactEmail: {
-    type: String,
-    required: [true, "please enter the contact  Email"],
+  isMultiLocation: {
+    type: Boolean,
+    required: true,
+    default: false,
   },
-  avatar: [
+  multiLocations: [
     {
-      public_id: {
-        type: String,
-        required: true,
-      },
-      url: {
-        type: String,
-        required: true,
-      },
+      type: String,
+      required: true,
     },
   ],
-  meta: {
-    description: {
-      type: String,
-      default:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
-    },
-    about: {
-      type: String,
-      default:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
-    },
-  },
-
-  cuisin: {
-    type: String,
-  },
-  services: {
-    type: String,
-  },
-  featured: {
-    type: String,
-  },
-  isOpen: {
-    type: Boolean,
-    default: true,
-  },
-
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-  updatetedAt: {
-    type: Date,
-  },
 });
 
 module.exports = mongoose.model("Restaurant", restaurantSchema);

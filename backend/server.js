@@ -4,6 +4,6 @@ const { connectDatabase } = require("./db/coon");
 
 connectDatabase();
 
-app.listen(process.env.PORT, () => {
+app.listen(4000, () => {
   console.log(`serverr is running at port ${process.env.PORT} `);
 });

@@ -43,7 +43,10 @@ exports.deletCategory = catchAsyncErrors(async (req, res) => {
       message: "Category Deleted Successfully ",
     });
   } else {
-    return;
+    res.status(500).json({
+      success: false,
+      message: "Not Found",
+    });
   }
 });
 
