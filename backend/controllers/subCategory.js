@@ -1,6 +1,6 @@
-const SubCategory = require("../../models/categoryModal/subCategory");
-const catchAsyncErrors = require("../../middelwares/catchAsyncError");
-const ErroHandler = require("../../utils/errorHandler");
+const SubCategory = require("../models/subCategory");
+const catchAsyncErrors = require("../middelwares/catchAsyncError");
+const ErroHandler = require("../utils/errorHandler");
 
 exports.createSubCategory = catchAsyncErrors(async (req, res) => {
   const subCategory = await SubCategory.create(req.body);

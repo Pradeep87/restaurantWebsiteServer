@@ -6,9 +6,9 @@ swaggerDocument = require('./swagger.json');
 
 // imports routes
 const errorMiddleware=require("./middelwares/error")
-const categoryRoutes = require("./routes/categoryRoutes/categoryRoutes");
-const subCategories = require("./routes/categoryRoutes/subCategoryRoutes");
-const foodItemRoutes = require("./routes/foodItem/foodItemRoute");
+const categoryRoutes = require("./routes/categoryRoutes");
+const subCategories = require("./routes/subCategoryRoutes");
+const foodItemRoutes = require("./routes/foodItemRoute");
 
 
 app.use(express.json());

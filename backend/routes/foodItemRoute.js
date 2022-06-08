@@ -6,7 +6,7 @@ const {
   deletFood,
   getFoodDetails,
   updateFood,
-} = require("../../controllers/foodItem/foodItem");
+} = require("../controllers/foodItem");
 
 router.route("/new").post(addFood);
 router.route("/").get(getAllFood);

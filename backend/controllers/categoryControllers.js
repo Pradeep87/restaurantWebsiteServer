@@ -1,5 +1,5 @@
-const Category = require("../../models/categoryModal/categoryModal");
-const catchAsyncErrors = require("../../middelwares/catchAsyncError");
+const Category = require("../models/categoryModal");
+const catchAsyncErrors = require("../middelwares/catchAsyncError");
 
 exports.createCategory = catchAsyncErrors(async (req, res) => {
   const category = await Category.create(req.body);
